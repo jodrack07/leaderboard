@@ -12,6 +12,7 @@ The leaderboard website displays scores submitted by different players. It also 
 - WEBPACK
 
 ## Live Demo
+  [Live demo here](https://joseph07-drack.github.io/leaderboard/dist)
 
 ## Screenshot
 
