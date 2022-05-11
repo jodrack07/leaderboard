@@ -1,5 +1,5 @@
 const list = document.querySelector('.list');
-export const alert = document.querySelector('.alert');
+export const alert = document.querySelector('.showAlert');
 
 list.innerHTML = '';
 
@@ -23,9 +23,11 @@ export const render = ({ result }) => {
 };
 
 export const showAlert = (text, color = 'red') => {
-  alert.innerHTML = text;
-  alert.style.color = color;
-  alert.style.display = 'block';
+  alert.innerHTML = `
+    <div class="alert alert-${type} mt-3" role="alert">
+        ${text}
+    </div>
+  `;
   setTimeout(() => {
     alert.style.display = 'none';
   }, 5000);
