@@ -5,6 +5,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 h1 {
   margin-left: 20%;
 }
@@ -45,11 +49,11 @@ h1 {
   border: 1px solid #0b0b0b;
 }
 
-.list p {
+.list li {
   padding-left: 5px;
 }
 
-.list p:nth-child(even) {
+.list li:nth-child(even) {
   background-color: #ddd;
 }
 
