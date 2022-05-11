@@ -1,7 +1,6 @@
 import { render, showAlert } from './utils.js';
 
-const BASE_URL =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const BASE_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 const gameId = 'i1UvxKrc5OCc9DmOVeKd';
 const URI = `${BASE_URL}games/${gameId}/scores/`;
 
@@ -16,8 +15,8 @@ export const createData = async (user, score) => {
     const response = await fetch(URI, {
       method: 'POST',
       body: JSON.stringify({
-        user: user,
-        score: score,
+        user,
+        score,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
