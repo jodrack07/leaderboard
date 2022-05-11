@@ -30,5 +30,5 @@ export const showAlert = (text, color = 'red') => {
   `;
   setTimeout(() => {
     alert.style.display = 'none';
-  }, 5000);
+  }, 3000);
 };
