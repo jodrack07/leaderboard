@@ -8,3 +8,21 @@ export const fetchData = async () => {
   const data = await response.json();
   get(data);
 };
+
+export const createData = async (user, score) => {
+  try {
+    const response = await fetch(URI, {
+      method: 'POST',
+      body: JSON.stringify({
+        user: user,
+        score: score,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+    showAlert('Leaderboard score created correctly.', 'green');
+  } catch (error) {
+    return error;
+  }
+};
