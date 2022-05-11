@@ -22,7 +22,7 @@ export const createData = async (user, score) => {
         'Content-type': 'application/json; charset=UTF-8',
       },
     });
-    showAlert('Leaderboard score created correctly.', 'green');
+    showAlert('Leaderboard score created correctly.', 'success');
   } catch (error) {
     return error;
   }

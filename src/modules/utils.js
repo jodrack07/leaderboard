@@ -3,10 +3,20 @@ export const alert = document.querySelector('.showAlert');
 
 list.innerHTML = '';
 
+export const showAlert = (text, type = 'danger') => {
+  alert.innerHTML = `
+    <div class="alert alert-${type} mt-3" role="alert">
+        ${text}
+    </div>
+  `;
+  setTimeout(() => {
+    alert.style.display = 'none';
+  }, 3000);
+};
+
 export const render = ({ result }) => {
   if (result.length < 1) {
     showAlert('No data available yet', 'danger');
-    alert.style.color = 'orange';
     return;
   }
 
@@ -17,18 +27,7 @@ export const render = ({ result }) => {
         <th scope="row">${index + 1}</th>
             <td>${record.user}</td>
             <td>${record.score}</td>
-        </tr>`
+        </tr>`,
     )
     .join('');
-};
-
-export const showAlert = (text, type = 'danger') => {
-  alert.innerHTML = `
-    <div class="alert alert-${type} mt-3" role="alert">
-        ${text}
-    </div>
-  `;
-  setTimeout(() => {
-    alert.style.display = 'none';
-  }, 3000);
 };

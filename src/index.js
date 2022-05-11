@@ -5,6 +5,7 @@ import { showAlert } from './modules/utils.js';
 const list = document.querySelector('.list');
 const submitButton = document.querySelector('.btn-submit');
 const refreshButton = document.querySelector('.btn-refresh');
+const form = document.querySelector('form');
 const user = document.querySelector('#playerName');
 const score = document.querySelector('#score');
 
@@ -15,6 +16,7 @@ const init = () => {
     e.preventDefault();
     if (user.value !== '' && score.value) {
       createData(user.value, score.value);
+      form.reset();
     } else {
       showAlert('All values are required');
     }
