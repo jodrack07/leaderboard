@@ -5,7 +5,7 @@ list.innerHTML = '';
 
 export const render = ({ result }) => {
   if (result.length < 1) {
-    alert.innerText = 'Not data available yet';
+    showAlert('No data available yet', 'danger');
     alert.style.color = 'orange';
     return;
   }
@@ -22,7 +22,7 @@ export const render = ({ result }) => {
     .join('');
 };
 
-export const showAlert = (text, color = 'red') => {
+export const showAlert = (text, type = 'danger') => {
   alert.innerHTML = `
     <div class="alert alert-${type} mt-3" role="alert">
         ${text}

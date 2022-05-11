@@ -1,5 +1,4 @@
 import './style.css';
-import { scores } from './modules/data.js';
 import { fetchData, createData } from './modules/actions.js';
 import { showAlert } from './modules/utils.js';
 
