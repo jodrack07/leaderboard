@@ -12,7 +12,13 @@ export const render = ({ result }) => {
 
   list.innerHTML = result
     .sort((a, b) => b.score - a.score)
-    .map((record) => `<li>${record.user} : ${record.score}</li>`)
+    .map(
+      (record, index) => `<tr>
+        <th scope="row">${index + 1}</th>
+            <td>${record.user}</td>
+            <td>${record.score}</td>
+        </tr>`
+    )
     .join('');
 };
 
