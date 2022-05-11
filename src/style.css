@@ -5,6 +5,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 h1 {
   margin-left: 20%;
 }
