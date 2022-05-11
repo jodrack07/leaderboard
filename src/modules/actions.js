@@ -8,7 +8,7 @@ const URI = `${BASE_URL}games/${gameId}/scores/`;
 export const fetchData = async () => {
   const response = await fetch(URI);
   const data = await response.json();
-  get(data);
+  render(data);
 };
 
 export const createData = async (user, score) => {
