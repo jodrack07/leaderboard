@@ -10,3 +10,17 @@ const user = document.querySelector('#playerName');
 const score = document.querySelector('#score');
 
 refreshButton.addEventListener('click', () => location.reload());
+
+const init = () => {
+  submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (user.value !== '' && score.value) {
+      createData(user.value, score.value);
+    } else {
+      showAlert('All values are required');
+    }
+  });
+};
+
+init();
+fetchData();
