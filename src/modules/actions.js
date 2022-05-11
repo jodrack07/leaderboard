@@ -1,3 +1,5 @@
+import { render, showAlert } from './utils.js';
+
 const BASE_URL =
   'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 const gameId = 'i1UvxKrc5OCc9DmOVeKd';
