@@ -8,6 +8,7 @@ The leaderboard website displays scores submitted by different players. It also 
 
 - HTML
 - CSS
+- BOOTSTRAP
 - JAVASCRIPT
 - WEBPACK
 
