@@ -1,26 +1,33 @@
 const list = document.querySelector('.list');
-export const alert = document.querySelector('.alert');
+export const alert = document.querySelector('.showAlert');
 
 list.innerHTML = '';
 
+export const showAlert = (text, type = 'danger') => {
+  alert.innerHTML = `
+    <div class="alert alert-${type} mt-3" role="alert">
+        ${text}
+    </div>
+  `;
+  setTimeout(() => {
+    alert.style.display = 'none';
+  }, 3000);
+};
+
 export const render = ({ result }) => {
   if (result.length < 1) {
-    alert.innerText = 'Not data available yet';
-    alert.style.color = 'orange';
+    showAlert('No data available yet', 'danger');
     return;
   }
 
   list.innerHTML = result
     .sort((a, b) => b.score - a.score)
-    .map((record) => `<li>${record.user} : ${record.score}</li>`)
+    .map(
+      (record, index) => `<tr>
+        <th scope="row">${index + 1}</th>
+            <td>${record.user}</td>
+            <td>${record.score}</td>
+        </tr>`,
+    )
     .join('');
-};
-
-export const showAlert = (text, color = 'red') => {
-  alert.innerHTML = text;
-  alert.style.color = color;
-  alert.style.display = 'block';
-  setTimeout(() => {
-    alert.style.display = 'none';
-  }, 5000);
 };
