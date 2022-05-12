@@ -27,6 +27,8 @@ The leaderboard website displays scores submitted by different players. It also 
 - Clone the repository using `git clone git@github.com:joseph07-drack/leaderboard.git`
 - cd into the project folder and run the following scripts
 - Run `npm install` to install all third party modules used in this project
+- Run `npm run start` to start the webpack watch mode
+- Run `npm run build` to make a production build
 
 ## Author
 
