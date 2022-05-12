@@ -3,7 +3,7 @@
 }
 
 .container {
-  width: 100% !important;
+  width: 100%;
   border: 1px solid rgba(128, 128, 128, 0.1);
   padding: 10px;
 }
@@ -15,6 +15,6 @@
 
 @media screen and (min-width: 786px) {
   .container {
-    width: 80% !important;
+    width: 80%;
   }
 }
